@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.housbrandapps.lunotickerwidget.LunoWidgetSettingsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/input_text_bitcoin_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="How Much BITCOIN do you Have?"
+                android:inputType="numberDecimal"
+                android:text="@={vm.bitcoinValue}" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(v) -> vm.saveClicked(v)}"
+            android:text="SAVE" />
+
+    </LinearLayout>
+</layout>

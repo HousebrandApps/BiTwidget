@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.housbrandapps.lunotickerwidget">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+             1. The broadcast receiver that refers to our widget. This needs the
+                intent-filter android.appwidget.action.APPWIDGET_UPDATE and the
+                meta-data for our XML widget configuration
+        -->
+        <receiver android:name=".LunoWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/luno_ticker_widget" />
+        </receiver>
+
+        <activity
+            android:name=".LunoWidgetSettingsActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+    </application>
+
+</manifest>

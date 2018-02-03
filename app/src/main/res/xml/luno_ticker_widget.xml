@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialKeyguardLayout="@layout/widget_luno_how_much"
+    android:initialLayout="@layout/widget_luno_how_much"
+    android:minHeight="40dp"
+    android:minResizeWidth="110dp"
+    android:minWidth="280dp"
+    android:previewImage="@drawable/ic_launcher_background"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="0"
+    android:widgetCategory="home_screen" />
